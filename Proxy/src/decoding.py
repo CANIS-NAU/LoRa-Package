@@ -44,7 +44,7 @@ def main(fileName):
             decoding_table[appCounter] = tempAppDict
             appCounter += 1
 
-    with open("decoding_table.json", 'w') as output:
+    with open("res/decoding_table.json", 'w') as output:
         json.dump(decoding_table, output)  
 
 

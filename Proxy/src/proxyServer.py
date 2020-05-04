@@ -101,7 +101,7 @@ class message_handler_thread(threading.Thread):
 
         # Read the appropriate encoding table based upon the app/api combo
         # Default to reading from "decoding_table.json"
-        ( app_name, api_name, params_table ) = read_decoding_table( "decoding_table.json", app_name_byte, api_name_byte )
+        ( app_name, api_name, params_table ) = read_decoding_table( "res/decoding_table.json", app_name_byte, api_name_byte )
 
         # Decode the message
         decoded_message = decode_message( app_name, api_name, params_table, byte_array )

@@ -42,7 +42,7 @@ def main(fileName):
             encoding_table[upperKey] = tempAppDict
             appCounter += 1
 
-    with open("encoding_table.json", 'w') as output:
+    with open("res/encoding_table.json", 'w') as output:
         json.dump(encoding_table, output)  
 
 

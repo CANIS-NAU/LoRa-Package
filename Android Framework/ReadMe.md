@@ -26,9 +26,6 @@ Table of contents:
 ## Import the Lora Messenger library:
 To get started using the Lora Messenger library, make sure you download the LoRa-Package and locate the "loralibrary" folder. 
 
-Open your Android Studio Project and make sure you are in the "android" view.
-
-
 1) To import the "loralibrary" within Android Studio, follow these steps:
 	1) File > New > Import Module …
 	2) Locate the location of the "loralibrary" folder and select it

@@ -73,12 +73,18 @@ val jsonString: String =
 The encoded message function will look up the passed parameter in the encoding table and find the corresponding byte to that parameter and replace it with the parameter that was passed in the first place.
 
 #### What does it take (parameters):
-The parameters that the encoding message function needs to take are:
-* ApiName: The name of the API that is chosen to execute.
-* Parameter: The actual message components assigned to an array that is passed from the application to the Lora Messenger library in order to encode it.
+This function will take in two parameters. A string for the "apiName" and a generic array for the "parameters". 
+encodeMessage(apiName: String, parameters: Array<Any>)
+
+Parameters | Description:
+------------ | -------------
+ApiName | The name of the API that is chosen to get encoded.
+Parameter | A collection of the parameters for the API call assigned to an array that is passed from the application to the Lora Messenger library in order to encode it.
 
 #### What does it return:
-It returns the encoded message in a byte code form.
+Returns | Description:
+------------ | -------------
+returns | The encoded message in a byte code form.
 
 
 
@@ -89,6 +95,13 @@ The forward message function is responsible for fragmenting the encoded message 
 
 #### What does it take (parameters):
 The only parameter that the forward message function takes is the encoded message after it got passed from the encoding message function.
+
+forwardMessage( message: ByteArray )
+
+Parameters | Description:
+------------ | -------------
+message | The encoded message after it got passed from the encoding message function.
+
 
 #### How to initialize the socket’s IP address in the forwardMessage function:
 The initialization of the IP address in the socket is very similar to assigning values in a regular array. To initialize the first part of the IP address, you need to set your array index at zero while passing the first part values (WTF are you saying?) of the IP address. Do the same thing for the rest of the parts in the IP address with respect to the index position. The following code snippet is how to initialize IP address in a form of an array 
@@ -104,7 +117,9 @@ The result will look like this --> 192.168.0.46
 ```
 
 #### What does it return:
-The forward message function returns the fragmented message and sets it to a specific IP address to be sent over the network.
+Returns | Description:
+------------ | -------------
+returns | The fragmented message and sets it to a specific IP address to be send it over the network.
 
 
 ##### Note: 

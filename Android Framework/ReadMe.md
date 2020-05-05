@@ -115,10 +115,10 @@ Prior to sending a packet stream, the forward Message function sends a 4 byte he
   * The first byte of this stream is always a combination of two nibbles that store information on which app and api this message is for, as defined by the encoding table.
 
 ## The send lora message function
-### What does it do
+#### What does it do
 The main method of LoRaMessenger which a developer calls, passing it the name of the API they wish to send and a collection  of parameters. These parameters and return behavior are described below in table 1. This method will iterate through the parameters, use encodeFromTable() to convert these parameters into byte codes, concatenate these byte codes into a message, and then send that message.
 
-### What does it take (parameters) 
+#### What does it take (parameters) 
 This function will take in two parameters. A string for the "apiName" and a var for the "parameters". 
 
 sendLoraMessage(String: apiName, var: parameters)
@@ -128,7 +128,7 @@ Parameters | Description:
 apiName | The name of the API to be encoded by the library. This name should be given as it appears in the encoding table.
 parameters | A collection of the parameters for the API call. Any parameter given must be included in the encoding table.
 
-### What does it return
+#### What does it return
 
 Returns: | Description:
 ------------ | -------------

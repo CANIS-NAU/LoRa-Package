@@ -48,7 +48,8 @@ How to add the encoding table to the Assets folder:
 	The Lora Messenger Library requires an encoding table. This encoding table is created with the proxy server. Once you have your encoding table (.json file) you need to add it to your "assets" folder within android studio.
 
 If you do not have an "assets" folder do the following:
-Right click on your application name > Select New > Folder > Assets Folder
+1) Right click on your application name 
+2) Select New > Folder > Assets Folder
 
 
 When you have your assets folder, drag your encoding_table.json file into the assets folder. This will import the encoding table into the projects assets folder.

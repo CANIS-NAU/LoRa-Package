@@ -4,11 +4,11 @@
 Table of contents:
 
 
-#### [How to import the Lora Messenger library](#Import-the-Lora-Messenger-library) 
+#### [How to import the Lora Messenger library](#Import-the-Lora-Messenger-library)   
 
-#### [How to add the encoding table to the Assets folder](#Add-the-encoding-table-to-the-Assets-folder)   
+#### [How to create an Assets folder inside of your application](#How-to-create-an-Assets-folder)  
 
-#### [How to create an Assets folder inside of your application](#Create-an-Assets-folder-inside-of-your-application)  
+#### [How to add the encoding table to the Assets folder](#How-to-add-the-encoding-table-to-the-Assets-folder) 
 
 #### [How to read the encoding table from the Assets folder](#Read-the-encoding-table-from-the-Assets-folder)  
 

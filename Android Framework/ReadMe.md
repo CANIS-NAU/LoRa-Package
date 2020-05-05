@@ -6,9 +6,9 @@ Table of contents:
 
 #### [How to import the Lora Messenger library](#Import-the-Lora-Messenger-library)   
 
-#### [How to create an Assets folder inside of your application](#How-to-create-an-Assets-folder)  
+#### [How to create an Assets folder inside of your application](#Create-an-Assets-folder)  
 
-#### [How to add the encoding table to the Assets folder](#How-to-add-the-encoding-table-to-the-Asset-folder) 
+#### [How to add the encoding table to the Assets folder](#Add-the-encoding-table-to-the-Asset-folder) 
 
 #### [How to read the encoding table from the Assets folder](#Read-the-encoding-table-from-the-Assets-folder)  
 
@@ -43,13 +43,13 @@ To get started using the Lora Messenger library, make sure you download the LoRa
 import com.teamlora.loralibrary.LoRaMessenger
 ```
 
-## How to create an Assets folder:
+## Create an Assets folder:
 In order to let your Android application read files, you need to have an assets folder. If you don’t have one you need to create it in order to add the encoding table file. This folder can be created by the following steps: 
 1) Navigate to your application/project directory 
 2) Right-click on your application folder 
 3) From the drop-down list, choose New > Folder > Assets Folder
 
-## How to add the encoding table to the Asset folder: 
+## Add the encoding table to the Asset folder: 
 The Lora Messenger Library requires an encoding table. This encoding table is created with the proxy server. Once you have your encoding table (.json file) you need to add it to your "assets" folder within android studio.
 
 When you have your assets folder, drag your encoding_table.json file into the assets folder. This will import the encoding table into the projects assets folder.

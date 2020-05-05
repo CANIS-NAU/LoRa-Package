@@ -73,7 +73,17 @@ The forward message function is responsible for fragmenting the encoded message 
 The only parameter that the forward message function takes is the encoded message after it got passed from the encoding message function.
 
 #### How to initialize the socket’s IP address in the forwardMessage function:
-The initialization of the IP address in the socket is very similar to assigning values in a regular array….(TO DO)
+The initialization of the IP address in the socket is very similar to assigning values in a regular array. To initialize the first part of the IP address, you need to set your array index at zero while passing the first part values (WTF are you saying?) of the IP address. Do the same thing for the rest of the parts in the IP address with respect to the index position. The following code snippet is how to initialize IP address in a form of an array 
+```
+val buffer = ByteArray(4)
+
+buffer.set(0, 192.toByte())
+buffer.set(1, 168.toByte())
+buffer.set(2, 0.toByte())
+buffer.set(3, 46.toByte())
+
+The result will look like this --> 192.168.0.46
+```
 
 #### What does it return:
 The forward message function returns the fragmented message and sets it to a specific IP address to be sent over the network.

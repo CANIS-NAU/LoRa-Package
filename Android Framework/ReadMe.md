@@ -24,8 +24,27 @@ Table of contents:
 # General Instructions
 
 ## Import the Lora Messenger library:
-Ryan
+To get started using the Lora Messenger library, make sure you download the LoRa-Package and locate the "loralibrary" folder. 
 
+Open your Android Studio Project and make sure you are in the "android" view.
+
+
+1) To import the "loralibrary" within Android Studio, follow these steps:
+	1) File > New > Import Module …
+	2) Locate the location of the "loralibrary" folder and select it
+	3) Module name: ":loralibrary"
+	4) Click "Finish" to import our library
+
+2) Once the library is imported make sure you add the library to your Gradle Scripts (build.gradle). Follow these steps:
+	1) Locate your projects build.gradle file
+	2) Add```implementation project(":loralibrary")``` under dependencies
+	3) Save this file
+	4) File > Sync Project With Gradle Files
+
+3) To use this library in your files, import the library at the top of your application.
+```
+import com.teamlora.loralibrary.LoRaMessenger
+```
 
 ## Add the encoding table to the Assets folder:
 How to add the encoding table to the Assets folder: 

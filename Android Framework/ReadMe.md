@@ -74,6 +74,7 @@ The encoded message function will look up the passed parameter in the encoding t
 
 #### What does it take (parameters):
 This function will take in two parameters. A string for the "apiName" and a generic array for the "parameters". 
+
 encodeMessage(apiName: String, parameters: Array<Any>)
 
 Parameters | Description:
@@ -94,7 +95,7 @@ returns | The encoded message in a byte code form.
 The forward message function is responsible for fragmenting the encoded message into smaller bytes and assigning the fragmented message to a packet stream. The function also assigns the packet stream to the device’s IP address which is where the messages will be received.
 
 #### What does it take (parameters):
-The only parameter that the forward message function takes is the encoded message after it got passed from the encoding message function.
+This function will take in one parameter. A ByteArray for the "message".
 
 forwardMessage( message: ByteArray )
 
@@ -104,7 +105,7 @@ message | The encoded message after it got passed from the encoding message func
 
 
 #### How to initialize the socket’s IP address in the forwardMessage function:
-The initialization of the IP address in the socket is very similar to assigning values in a regular array. To initialize the first part of the IP address, you need to set your array index at zero while passing the first part values (WTF are you saying?) of the IP address. Do the same thing for the rest of the parts in the IP address with respect to the index position. The following code snippet is how to initialize IP address in a form of an array 
+The initialization of the IP address in the socket is very similar to assigning values in a regular array. To initialize the first part of the IP address, you need to set your array index at zero while passing the first part values (WTF are you saying?) of the IP address. Do the same thing for the rest of the parts in the IP address with respect to the index position. The following code snippet is how to initialize IP address in a form of an array.
 ```
 val buffer = ByteArray(4)
 

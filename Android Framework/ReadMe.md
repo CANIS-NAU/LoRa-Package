@@ -12,14 +12,13 @@ Table of contents:
 
 #### [How to read the encoding table from the Assets folder](#Read-the-encoding-table-from-the-Assets-folder)  
 
- 
 #### [The encodingMessage function](#The-encoding-message-function)  
 
 #### [The forwardMessage function](#The-forward-message-function)  
 
 #### [The sendLoraMessage function](#The-send-lora-message-function)  
 
-
+#### [How to Integrate OpenCellID with the Lora Messenger Library](#Integrate-OpenCellID-with-the-Lora-Messenger-Library)  
 
 # General Instructions
 
@@ -157,3 +156,23 @@ parameters | A collection of the parameters for the API call. Any parameter give
 Returns: | Description:
 ------------ | -------------
 returns | If the apiName or a parameter could not be found in the encoding table, return UNKNOWN_ENCODING_PARAMETER_ERROR. If the combined byte codes of the parameters would exceed the allowable size of a packet on LoRaWAN return EXCEEDED_PACKET_SIZE_ERROR. Otherwise, return nothing.
+
+
+# Integrate OpenCellID with the Lora Messenger Library
+
+### How to integrate the OpenCellID application with the lora Messenger library to be able send messages to the OpenCellID web server:
+
+To get your application to work as a simple OpenCellID app, you need to call the Lora Messenger library inside of your application and pass it specific parameters to be able to make your app behave as an OpenCellID project. The following code snippet will give you an insight on how to pass the name of the app (e.g OpenCellID) and the application APIs (e.g Add a Single Measurement) from your application to the LoRa Messenger Library.
+
+The following code snippet is how to pass the OpenCellID as an app name to Lora Messenger object
+
+```
+val messenger = LoRaMessenger("OpenCellID", jsonString )
+```
+
+Furthermore, the following code snippet is how to Pass an OpenCellID API to the Lora Messenger library by the sendLoRaMessge function (e.g Add A Single Measurement)
+
+```
+messenger.sendLoRaMessage("measure/add", parameters )
+```
+
